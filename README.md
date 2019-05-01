@@ -49,7 +49,7 @@ There is also an `index.html` file in the root of the repo that updates the map 
 
 1. create a new feature branch - `git checkout -b update_homepage`
 2. Bump the `pkg_version` in `habitat/plan.sh`
-3. Overwrite `src/main/webapp/index.html` with the contents of the `red-index.html` in the root directory _NOTE: the index.html has a version number hard coded on line 38. Update that to your version number if you want it to match.
+3. Overwrite `src/main/webapp/index.html` with the contents of the `red-index.html` in the root directory 
 4. `hab studio enter` 
 5. `build`
 
