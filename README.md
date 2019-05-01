@@ -54,33 +54,5 @@ There is also an `index.html` file in the root of the repo that updates the map 
 5. `build`
 
 
-## Terraform
-Included in the repo is terraform code for launching the application in AWS and Google Kubernetes Engine. Provision either AWS, GKE, or both, and then you can watch Habitat update across cloud deployments. 
 
-[Terraform](https://www.terraform.io/intro/getting-started/install.html).
-
-### Proivision National-Parks in AWS
-You will need to have an [AWS account already created](https://aws.amazon.com)
-
-#### Step
-1. `cd terraform/aws`
-2. `cp tfvars.example terraform.tfvars`
-3. edit `terraform.tfvars` with your own values
-4. `terraform apply`
-
-Once the provisioning finishes you will see the output with the various public IP addresses
-```
-Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
-
-Outputs:
-
-haproxy_public_ip = 34.216.185.16
-mongodb_public_ip = 54.185.74.152
-national_parks_public_ip = 34.220.209.230
-permanent_peer_public_ip = 34.221.251.189
-```
-
-`http://<haproxy_public_ip>:8085/national-parks`
-or
-`http://<haproxy_public_ip>:8000/haproxy-stats`
 
